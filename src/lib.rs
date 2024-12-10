@@ -24,13 +24,18 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 
     // println!("With text:\n{contents}");
 
-    let results: Vec<&str> = contents
-        .lines()
-        .filter(|line| line.contains(&config.query))
-        .collect();
+    // let results: Vec<&str> = contents
+    //     .lines()
+    //     .filter(|line| line.contains(&config.query))
+    //     .collect();
 
-    for line in results {
-        println!("{}", line);
+    
+    // for line in results {
+    //     println!("{}", line);
+    // }
+
+    for line in search(&config.query, &contents) {
+        println!("{line}");
     }
 
     Ok(())
