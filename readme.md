@@ -16,3 +16,6 @@ cargo test
 
 test fn search
 ```
+
+### Note
+Using "eprintln!" to print error messages ensures the program's output is structured and easy to use in all scenarios, such as when redirecting output to a file or using it in automation scripts. 
